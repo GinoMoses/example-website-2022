@@ -8,9 +8,9 @@
     font-family: sans-serif;
 }
 :root{
-    --gradient1: to bottom, #96c93d, #00b09b;
+    --gradient1: to right, #96c93d, #00b09b;
 }
-a{
+.list a{
     text-decoration: none;
     color: white;
     font-size: 1.6vw;
@@ -18,20 +18,31 @@ a{
     transition-duration: .3s;
     
 }
+#navbar-side a{
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 1.6vw;
+    font-family: 'Open Sans', sans-serif;
+    transition-duration: .3s;
+    background: #00b09b;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to bottom, #96c93d, #00b09b); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
+}
 body{
     /* background-color: rgb(23, 23, 23); */
-    background: 
-    linear-gradient(
-          rgba(0, 0, 0, .8), 
-          rgba(0, 0, 0, .8)),
-    url(img/bg.jpg);
-    background-size: 100%;
+   background-color: #131313;
 }
 #navbar-cont{
     align-items: center;
     display: flex;
     width: 100%;
     height: 10vh;
+    background-color: rgb(15, 15, 15);
 }
 #navbar-list{
     list-style-type: none;
@@ -47,11 +58,40 @@ body{
     height: auto;
     width: 15%;
 }
-li{
+.list{
     float: left;
     width: 20%;
 }
-
+#navbar-cont2{
+    position: absolute;
+    top: 0;
+    display: flex;
+    z-index: 999;
+    background: #0c0c0c;
+    height: 100%;
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.list2{
+    margin: 5vh .7vh 5vh .7vh;
+    color: rgb(255, 255, 255);
+    transition-duration: .3s;
+}
+.list2 a{
+   
+    text-decoration: none;
+    color: white;
+    font-size: 1.6vw;
+    font-family: 'Open Sans', sans-serif;
+    transition-duration: .3s;
+}
+.list2 a:hover{
+    color: #96c93d;
+    
+}
 #main-cont1{
     margin: auto;
     margin-top: 8vh;
@@ -64,22 +104,27 @@ li{
 .sub-main-cont1{
     width: 23vw;
     height: auto;
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #002c53, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #002c53, #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0d0d0d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #1e1e1e, #0d0d0d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #1e1e1e, #0d0d0d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     border: solid none;
-    border-radius: 2%;
+    border-radius: 1.6vh;
     transition-duration: .3s;
+    line-height: 2.2vh;
+}
+.sub-main-cont1 .head1{
+    line-height: 3.2vh;
+    margin-top: 2vh;
 }
 #container1-2{
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000428, #000428);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000428,  #000428); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0d0d0d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0d0d0d, #0d0d0d);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0d0d0d,  #0d0d0d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 #container1-3{
-    background: #000428;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #000428, #002c53);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #000428, #002c53); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    background: #0d0d0d;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #0d0d0d, #1e1e1e);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #0d0d0d, #1e1e1e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .head1{
@@ -89,6 +134,7 @@ li{
     background: -webkit-linear-gradient(var(--gradient1));  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(var(--gradient1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-weight: bold;
     text-transform: uppercase;
@@ -99,6 +145,7 @@ li{
     background: -webkit-linear-gradient(to right, #96c93d, #00b09b);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(var(--gradient1)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     font-size: 1.3vw;
     font-weight: bold;
@@ -113,8 +160,27 @@ li{
 .sub-main-cont1:hover{
     transform: scale(1.1);
     filter: invert(100%);
+    
 }
 
 #navbar-main #navbar-list a:hover{
     color: rgb(65, 65, 65);
+}
+
+
+
+#icon1{
+    font-size: 6vh;
+}
+
+/* ICONS */
+
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 300,
+  'GRAD' 0,
+  'opsz' 48
+
 }
